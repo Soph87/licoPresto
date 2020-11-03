@@ -1,0 +1,134 @@
+/*--------------------FORMULAIRES-----------------------*/
+.formContainer{
+    margin: 1em auto;
+}
+
+.cote{
+    display: none;
+}
+
+.formContainer form, .formContainer .card{
+    width: 100%;
+    max-width: 600px;
+    background-color: #F1F1F1;
+    padding: 1em;
+    color: #5E5E5E;
+    margin: 0 auto;
+    border-radius: 4px;
+}
+
+form input{
+    width: 100%;
+    background-color: #D5D5D5;
+    border: none;
+    padding: 0.5em 1em;
+    border: 1px solid #D5D5D5;
+}
+
+.formHeader p{
+    text-align: center;
+    font-size: 0.9em;
+    margin: 0.2em auto 2em;
+    max-width: 400px;
+}
+
+.formHeader h3{
+    color: #5E5E5E;
+    text-align: center;
+    font-size: 1em;
+    margin: 0 0 1em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid #D5D5D5;
+}
+
+.formGroupCheck{
+    color: #5E5E5E;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.formGroupCheck input{
+    width: auto;
+    margin-right: 0.5em;
+}
+
+.formGroupCheck label{
+    font-size: 0.9em;
+}
+
+.formGroup label{
+    display: block;
+    margin-bottom: 0.5em;
+    color: #5E5E5E;
+}
+
+input.is_invalid{
+    border: 1px solid #FF0080;
+}
+
+.errorDisplay{
+    margin: 0.3em 0 1em;
+    font-size: 0.8em;
+    color: #FF0080;
+}
+
+form button{
+    margin: 3em 0 0;
+}
+
+.sousForm{
+    font-size: 0.8em;
+    margin: 2em 0 3em;
+}
+
+/*--------------------MEDIA QUERIES-----------------------*/
+@media (min-width: 550px){
+    .formRow{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .formRow .formGroup:first-child{
+        margin-right: 1em;
+    }
+}
+
+@media (min-width: 900px){
+    .expandForm{
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+    }
+
+    .cote{
+        display: block;
+        background-color: #0D967F;
+        width: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+    }
+
+    .cote svg{
+        fill: #F1F1F1;
+    }
+
+    .expandForm form {
+        padding: 3em 1em;
+        border-radius: 0 4px 4px 0;
+        margin: 0;
+    }
+
+    form{
+        padding: 1em 1em 2em;
+    }
+
+    .sousForm{
+        font-size: 0.8em;
+        margin: 2em 0 0;
+    }
+}

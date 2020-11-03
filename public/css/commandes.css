@@ -1,0 +1,269 @@
+/*-----------------CARTE-----------------*/
+#carte{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: stretch;
+    margin-left: -2em;
+}
+
+.cardPlat{
+    padding: 0 0 2em 2em;
+    width: 100%;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.cardHaut{
+    flex: 1;
+}
+
+.cardTitre{
+    font-size: 1em;
+    margin: 0.4em 0;
+}
+
+.cardPrix{
+    margin: 0 0 0.4em;
+}
+
+#commandes form{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.cardPlat input{
+    width: 50px;
+    height: 36px;
+    padding: 0.3em;
+    border: none;
+    text-align: center;
+}
+
+input[type="number"]{
+    -webkit-appearance: textfield;
+       -moz-appearance: textfield;
+            appearance: textfield;
+}
+
+.inputContainer{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    margin-right: 1em;
+}
+
+.qttBtn{
+    background-color: #0D967F;
+    color: #F1F1F1;
+    font-weight: 700;
+    margin: 0;
+    border: none;
+    cursor: pointer;
+}
+
+.qttMoins, .qttMoinsP{
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.qttPlus, .qttPlusP{
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.btnForm{
+    background-color: #0D967F;
+    height: 36px;
+    margin: 0;
+    border: none;
+    color: #F1F1F1;
+    padding: 0.3em 1em;
+    font-weight: 700;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/*-----------------PANIER-----------------*/
+#recu{
+    width: 100%;
+    background-color: #D5D5D5;
+    padding: 0.5em;
+    color: #5E5E5E;
+}
+
+#recu.cacheRecu{
+    display: none;
+}
+
+#recu.recuCenter{
+    margin: 0 auto;
+}
+
+#listePanier, #totalPanier{
+    background-color: #F1F1F1;
+    padding: 0 0.5em;
+    border-radius: 3px;
+}
+
+#totalPanier{
+    padding: 1em 0.5em;
+    margin: 2em 0 1em;
+}
+
+.panierItem{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1em 0;
+    border-bottom: 1px solid #D5D5D5;
+}
+
+.panierTexte{
+    flex-grow: 1;
+    margin-right: 2em;
+}
+
+#recu img{
+    width: 60px;
+    height: auto;
+    border-radius: 3px;
+    margin-right: 0.3em;
+    display: none;
+}
+
+.panierTitre{
+    font-size: 0.8em;
+    margin: 0 0 0.5em;
+    font-weight: 700;
+}
+
+.panierQuantite{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.prixPanier{
+    margin: 0;
+}
+
+#recu input{
+    width: 35px;
+    height: 25px;
+    padding: 0.3em;
+    font-size: 0.8em;
+    border: none;
+    text-align: center;
+}
+
+.inputContainerPanier{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.qttBtnP{
+    border: none;
+    height: 25px;
+    background-color: #0D967F;
+    color: #F1F1F1;
+    cursor: pointer;
+}
+
+.suppPanier{
+    border: none;
+    background-color: transparent;
+    color: #b40e40;
+    cursor: pointer;
+}
+
+.recuLink{
+    margin-bottom: 2em;
+}
+
+/*-----------------NAV RESPONSIVE-----------------*/
+#navCmd{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #F1F1F1;
+    padding: 0.5em;
+    color: #5E5E5E;
+}
+
+#navCmd > div {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#navCmd p{
+    font-weight: 700;
+    margin-right: 1em;
+}
+
+#navCmd button{
+    margin-left: 1em;
+}
+
+
+@media (min-width: 485px){
+    #carte{
+        justify-content: flex-start;
+    }
+
+    .cardPlat{
+        flex-basis: 50%;
+    }
+}
+
+@media (min-width: 730px) {
+    .cardPlat{
+        flex-basis: calc(100% / 3);
+    }
+
+    #carteContainer{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    #recu{
+        min-width: 360px;
+        max-width: 370px;
+        margin-left: 2em;
+    }
+
+    #recu img{
+        display: block;
+    }
+}
+
+@media (min-width: 900px) {
+    .cardPlat{
+        flex-basis: 50%;
+    }
+
+    #recu.cacheRecu{
+        display: block;
+    }
+
+    #navCmd{
+        display: none;
+    }
+}
+
+@media (min-width: 1185px){
+    .cardPlat{
+        flex-basis: calc(100% / 3);
+    }
+}

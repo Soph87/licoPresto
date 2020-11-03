@@ -1,0 +1,287 @@
+/*--------------------ACCUEIL-----------------------*/
+/*--HERO--*/
+#hero{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../images/foodTruck.png");
+    background-size: cover;
+    background-position: bottom center;
+}
+
+#hero > div{
+    text-align: center;
+}
+
+#mainAccueil h1{
+    font-size: 2em;
+    text-shadow: 1px 1px 4px #131518;
+    max-width: 700px;
+    margin: 0 auto 1.5em;
+}
+
+/*--MENU--*/
+.platsContainer{
+    margin: 0 0 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.plat{
+    max-width: 370px;
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+    background-color: #2B313C;
+}
+
+.platBas{
+    
+    padding: 1.5em 1em;
+    flex: 1;
+}
+
+.plat img{
+    display: block;
+}
+
+.plat h3{
+    margin: 1.5em 0 0.5em;
+    padding: 0 1em;
+    font-family: 'Pacifico', cursive;
+    font-size: 1.2em;
+}
+
+.plat p{
+    padding: 0 1.3em;
+    font-size: 0.9em;
+    flex-grow: 1;
+}
+
+.plat .prix{
+    padding: 0 1.3em 1.5em;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nombre{
+    font-weight: 700;
+    font-size: 1.3em;
+    margin-right: -1.8em;
+    position: relative;
+    z-index: 3;
+}
+
+.rond{
+    width: 3em;
+    height: 3em;
+    background-color: #0D967F;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+}
+
+/*--CARTE--*/
+#carte{
+    background-color: #2B313C;
+}
+
+#sousTitre{
+    max-width: 800px;
+    margin: 0 auto 1.5em;
+}
+
+#mapid{
+    height: 400px;
+    width: 100%;
+    max-width: 600px;
+    z-index: 2;
+    margin: 0 auto;
+}
+
+#horaires{
+    background-color: #0D967F;
+    padding: 1em 1em 2em;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.petitTitre{
+    margin: 0 0 1.5em;
+}
+
+.ligneHoraire{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size: 0.9em;
+}
+
+.jour{
+    text-align: right;
+    width: 5.8em;
+    padding: 0.5em 1em 0.5em 0;
+}
+
+.plage{
+    border-left: 1px solid #F1F1F1;
+    padding: 0.5em 0 0.5em 1em;
+}
+
+.plage span{
+    display: block;
+}
+
+/*--LIVRAISON--*/
+#etapesLivraison{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 1em 0 2em;
+}
+
+.etape{
+    max-width: 200px;
+    padding: 0 0.8em;
+}
+
+.etape p{
+    font-size: 0.7em;
+    text-align: center;
+}
+
+.etapeFond{
+    position: relative;
+    background-color: #2B313C;
+    padding: 0.3em;
+}
+
+.etapeNbr{
+    position: absolute;
+    width: 2em;
+    height: 2em;
+    background-color: #0D967F;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 0.8em;
+    top: -1em;
+    left: -1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.etapeFond svg{
+    fill: #F1F1F1;
+}
+
+#livraisonContainer .petitTitre{
+    margin: 0;
+}
+
+#texteLivraison{
+    max-width: 800px;
+    margin: 0.8em 0 2.5em;
+}
+
+#fondPegase{
+    background-color: #2B313C;
+    margin-bottom: 1em;
+}
+
+#pegase{
+    display: block;
+}
+
+/*--------------------MEDIA QUERIES-----------------------*/
+@media (min-width: 500px){
+    .etape{
+        padding: 0 2em;
+    }
+
+    .etape p{
+        font-size: 0.9em;
+    }
+    
+    .etapeNbr{
+        width: 1.7em;
+        height: 1.7em;
+        font-size: 1em;
+    }
+}
+
+@media (min-width: 700px) {
+    .platsContainer{
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+        flex-wrap: wrap;
+    }
+
+    .plat{
+        max-width: 300px;
+        margin: 0 1em 2em;
+    }
+}
+
+@media (min-width: 750px){
+    #etapesLivraison{
+        margin: 1em 0 5em;
+    }
+
+    #livraisonContainer{
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        width: 100%;
+        max-width: 1250px;
+        margin: 0 auto;
+    }
+
+    #fondPegase{
+        margin-right: 1.5em;
+        margin-bottom: 0;
+    }
+
+    #livraisonContainer .centerContainer{
+        text-align: left;
+    }
+}
+
+@media (min-width: 800px){
+    #carteContainer{
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+    }
+
+    #horaires, #mapid{
+        margin: 0;
+    }
+
+    #horaires{
+        max-width: 300px;
+    }
+}
+
+@media (min-width: 1000px){
+    #livraisonContainer .sousTitre{
+        margin: 0.8em 0 4.5em;
+    }
+
+    #etapesLivraison{
+        margin: 1em 0 4em;
+    }
+}
+
+@media (min-width: 1100px) {
+    .plat{
+        max-width: 370px;
+        margin: 0 1em 2em;
+    }
+}

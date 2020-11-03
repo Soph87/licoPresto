@@ -1,0 +1,26 @@
+#recapContainer ul{
+    padding: 0;
+    list-style-type: none;
+}
+
+#recapContainer li{
+    font-weight: 700;
+}
+
+#recapContainer li p{
+    font-weight: normal;
+    margin: 0.2em 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#total p{
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #d5d5d5;
+    margin: 0;
+    padding: 0.5em 0 0;
+}

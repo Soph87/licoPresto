@@ -1,0 +1,298 @@
+/* font-family: 'Pacifico', cursive;
+font-family: 'Poppins', sans-serif; */
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #1F242D;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+    color: #F1F1F1;
+}
+
+main{
+    flex: 1;
+}
+
+h1, h2{
+    font-family: 'Pacifico', cursive;
+    font-weight: normal;
+    display: block;
+}
+
+h1{
+    margin: 0 0 1em;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.centerContainer{
+    text-align: center;
+}
+
+h2{
+    display: inline-block;
+    margin: 0;
+    font-size: 1.5em;
+    padding-bottom: 0.5em;
+    border-bottom: 3px dashed #0D967F;
+    margin-bottom: 1.5em;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.container{
+    max-width: 1500px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+section{
+    padding: 3em 1em 4em;
+}
+
+section.sectionTop{
+    padding: 1em 1em 4em;
+}
+
+.linkBtn, .linkBtnVert{
+    display: inline-block;
+    padding: 1.3em 1.2em;
+    color: #F1F1F1;
+    text-decoration: none;
+    border-radius: 3px;
+    font-weight: 700;
+    font-size: 0.8em;
+    border: none;
+    cursor: pointer;
+}
+
+.linkBtn{
+    background-color: #FF0080;
+}
+
+.linkBtnVert{
+    background-color: #0D967F;
+}
+
+.linkBtn:hover{
+    background-color: #BD1469;
+}
+
+.linkBtn:disabled{
+    background-color: #949494;
+    cursor: default;
+}
+
+.linkBtnVert:hover{
+    background-color: #0A705F;
+}
+
+.lienVert{
+    white-space: nowrap;
+    color: #0D967F;
+}
+
+/*--------------------HEADER-----------------------*/
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.5em;
+    background-color: #1F242D;   
+    z-index: 10;
+    border-bottom: 2px solid #2B313C;
+}
+
+header > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+header nav{
+    margin-right: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav.navHome{
+    display: none;
+}
+
+#navContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo{
+    display: block;
+}
+
+#logo svg{
+    fill: #F1F1F1;
+    width: 40px;
+    height: auto;
+}
+
+header .linkBtnVert, header .linkBtn{
+    padding: 0.6em 1.2em;
+}
+
+header .linkBtnVert{
+    display: none;
+}
+
+header nav a{
+    color: #F1F1F1;
+    margin-left: 2em;
+    font-size: 0.8em;
+    text-decoration: none;
+}
+
+header nav .navActive{
+    text-decoration: underline;
+}
+
+header .btnPanierHeader{
+    width: 35px;
+    height: auto;
+    padding: 0.3em;
+    margin-right: 1em;
+    position: relative;
+}
+
+.btnPanierHeader svg{
+    fill: #F1F1F1;
+}
+
+#panierLength{
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background-color: #F1F1F1;
+    height: 20px;
+    min-width: 20px;
+    color: #5E5E5E;
+    border-radius: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+}
+
+
+/*--------------------FOOTER-----------------------*/
+footer{
+    text-align: center;
+    background-color: #0D967F;
+    padding: 1.5em;
+    color: #F1F1F1;
+}
+
+footer h4{
+    font-size: 0.8em;
+    margin: 0 0 0.8em;
+}
+
+#reseaux{
+    margin-bottom: 1.6em;
+}
+
+.social{
+    height: 35px;
+    width: 35px;
+    padding: 0.5em;
+    border: none;
+    background-color: #1F242D;
+    cursor: pointer;
+    border-radius: 50%;
+    margin: 0 0.5em;
+}
+
+.social svg{
+    width: 100%;
+    height: auto;
+    fill: #F1F1F1;
+}
+
+.infos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.5em;
+}
+
+.infos svg{
+    width: 35px;
+    height: auto;
+    fill: #F1F1F1;
+    margin-right: 0.4em;
+}
+
+.infos p{
+    margin: 0;
+    font-size: 0.8em;
+    text-decoration: underline;
+}
+
+.mentions{
+    margin-top: 1.6em;
+    font-size: 0.7em;
+}
+
+/*--------------------MEDIA QUERIES-----------------------*/
+@media (min-width: 500px) {
+    header .linkBtnVert{
+        display: block;
+        margin-right: 1em;
+    }
+}
+
+@media (min-width: 550px) {
+    header nav.navHome{
+        display: block;
+    }
+}
+
+@media (min-width: 700px) {
+    h2{
+        font-size: 2em;
+    }
+}
+
+@media (min-width: 800px) {
+    #mainAccueil h1{
+        font-size: 2.5em;
+    }
+
+    header nav{
+        margin-right: 4em;
+    }
+
+    header nav a{
+        margin-left: 3em;
+    }
+}
+
+@media (min-width: 900px) {
+    header .linkBtnVert{
+        margin-right: 0;
+    }
+    
+    #panierBtn{
+        display: none;
+    }
+}
