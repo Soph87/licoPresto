@@ -21,5 +21,4 @@ require APPROOT . '/views/inc/header.php';
         </div>
     </section>
 </main>
-<?php $scripts = ['https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js', URLROOT . '/js/paiement.js']; ?>
 <?php require APPROOT . '/views/inc/footer.php' ?>
