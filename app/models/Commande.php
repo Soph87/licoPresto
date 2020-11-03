@@ -14,6 +14,13 @@ class Commande
         return $this->db->resultSet();
     }
 
+    public function getPlatById($id)
+    {
+        $this->db->query("SELECT * FROM menu WHERE id = :id");
+        $this->db->bind(':id', $id);
+        return $this->db->resultSingle();
+    }
+
     public function ajoutCmd($user_id, $total, $adresse, $commande, $stripe_id)
     {
         $this->db->query('INSERT INTO commandes (id_user, prix_total, adresse_livraison, stripe_id) VALUES (:id, :total, :adresse, :stripe)');

@@ -27,7 +27,6 @@ const createToken = () => {
 
 const formSubit = (token) => {
     axios.post(`${urlRoot}/commandes/passerCmd`, {
-        id_user: userId,
         adresse : userAdresse,
         commande: panier,
         token: token

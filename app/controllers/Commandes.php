@@ -60,16 +60,7 @@ class Commandes extends Controller
 
     public function paiement()
     {
-        //Affichage de la page de paiement stripe
-        if (!panierPlein()) {
-            redirect('commandes');
-            return;
-        };
 
-        if (!adresseOk()) {
-            redirect('commandes/adresse');
-            return;
-        }
 
         $this->view('commandes/paiement');
     }
@@ -77,13 +68,15 @@ class Commandes extends Controller
     public function passerCmd()
     {
         $data = json_decode(file_get_contents("php://input"));
-        $user_id = $data->id_user;
+        $user_id = $_SESSION['id'];
         $commande = $data->commande;
         $adresseObj = $data->adresse;
 
         $total = 0;
         foreach ($commande as $ligne) {
-            $total += $ligne->qtt * $ligne->prix_unite;
+            $plat = $this->commandeModel->getPlatById($ligne->id_plat);
+            $total += $ligne->qtt * $plat->prix;
+            $ligne->prix_unite = $plat->prix;
         }
 
         $token = $data->token;
