@@ -34,7 +34,7 @@ class User
 
         if ($this->db->execute()) {
             $id = $this->db->lastId();
-            return false;
+            return $id;
         } else {
             return false;
         }
