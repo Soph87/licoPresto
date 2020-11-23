@@ -4,6 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://licopresto.sophie-roche.fr/" />
+    <meta property="og:title" content="LicoPresto" />
+    <meta property="og:description" content="LicoPresto, le foodtruck qui murmure à l'estomac des licornes !" />
+    <meta property="og:image" content="<?= URLROOT; ?>/images/illu-rs.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://licopresto.sophie-roche.fr/" />
+    <meta property="twitter:title" content="LicoPresto" />
+    <meta property="twitter:description" content="LicoPresto, le foodtruck qui murmure à l'estomac des licornes !" />
+    <meta property="twitter:image" content="<?= URLROOT; ?>/images/illu-rs.png" />
+
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="<?= URLROOT; ?>/css/normalize.css">
     <link rel="stylesheet" href="<?= URLROOT; ?>/css/style.css">
